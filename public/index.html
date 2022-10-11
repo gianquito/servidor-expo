@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="semaforo-container">
+      <p>Semaforo 1</p>
+        <div class="semaforo" id="Semaforo1">
+          <div class="semaforo-luz" id="semaforo1-rojo"></div>
+          <div class="semaforo-luz" id="semaforo1-amarillo"></div>
+          <div class="semaforo-luz" id="semaforo1-verde"></div>
+        </div>
+      </div>
+          <div class="auto H">
+            <img src="assets/auto_apagado.png" id="Auto1_luzH">
+          </div>
+          <div class="auto H">
+            <img src="assets/auto_apagado.png" id="Auto2_luzH">
+          </div>
+          <div class="auto H">
+            <img src="assets/auto_apagado.png" id="Auto3_luzH">
+          </div>
+          <div class="auto H">
+            <img src="assets/auto_apagado.png" id="Auto4_luzH">
+          </div>
+      <div class="semaforo-container">
+        <p>Semaforo 2</p>
+        <div class="semaforo" id="Semaforo2">
+          <div class="semaforo-luz" id="semaforo2-rojo"></div>
+          <div class="semaforo-luz" id="semaforo2-amarillo"></div>
+          <div class="semaforo-luz" id="semaforo2-verde"></div>
+        </div>
+        </div>
+        <div class="auto">
+          <img src="assets/auto_apagado.png" id="Auto1_luzV">
+        </div>
+        <div class="auto">
+          <img src="assets/auto_apagado.png" id="Auto2_luzV">
+        </div>
+        <div class="auto">
+          <img src="assets/auto_apagado.png" id="Auto3_luzV">
+        </div>
+        <div class="auto">
+          <img src="assets/auto_apagado.png" id="Auto4_luzV">
+        </div>
+    </div>
+
+    <div class="camara" id="camara">
+        <iframe src="https://blackscreen.app/" width="640px" height="480px"></iframe>
+    </div>
+
+    <div class="bicisenda">
+      <div class="bicisenda-slider">
+        <p>Bicisenda</p>
+        <div id="Bici_posicion">
+          <span class="bicisenda-value">0</span>
+          <img class="bicisenda-bici" src="assets/bici.png" />
+          <div class="bicisenda-pointer"></div>
+        </div>
+        <div class="bicisenda-linea-fondo"></div>
+        <div class="bicisenda-linea" id="bici-linea"></div>
+      </div>
+      <div class="bicenda-luz-container">
+        <div class="bicisenda-luz" id="Bici_led1">
+        </div>
+        <div class="bicisenda-luz" id="Bici_led2">
+        </div>
+        <div class="bicisenda-luz" id="Bici_led3">
+        </div>
+        <div class="bicisenda-luz" id="Bici_led4">
+        </div>
+        <div class="bicisenda-luz" id="Bici_led5">
+        </div>
+      </div>
+    </div>
+
+    <div class="luces-ciudad">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz1">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz2">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz3">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz4">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz5">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz6">
+      <img src="assets/poste_apagado.jpg" id="Calle_luz7">
+    </div>
+
+  </body>
+</html>

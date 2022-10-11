@@ -1,0 +1,155 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.grid-container{
+  display: inline-grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 100px 150px 150px 150px 150px;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  width: auto;
+}
+
+.semaforo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.H{
+  transform: rotate(90deg);
+}
+
+.semaforo{
+  border: 3px solid black;
+  height: 103px;
+  width: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.semaforo-luz{
+  margin-top: 3px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: black;
+}
+
+.auto img{
+  width: 100px;
+}
+
+.auto{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.bicisenda{
+  width: 40%;
+  margin: 60px;
+}
+
+.bicisenda-slider{
+  z-index: 200;
+}
+
+.bicisenda-slider p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Bici_posicion{
+  position: relative;
+  transition-timing-function: linear;
+}
+
+.bicisenda-linea-fondo{
+  height: 18px;
+  width: 100%;
+  background: black;
+  opacity: 0.2;
+  border-radius: 10px;
+}
+
+.bicisenda-linea{
+  position: relative;
+  bottom: 18px;
+  background: black;
+  height: 18px;
+  border-radius: 10px;
+  width: 0px;
+}
+
+.bicisenda-bici{
+  position: relative;
+  width: 120px;
+  left: -70px;
+  top: 3px;
+  z-index: 5;
+}
+
+.bicisenda-pointer{
+  position: relative;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #000;
+  z-index: 5;
+}
+
+.bicisenda-value{
+  position: relative;
+  font-size: 12px;
+  left: -4px;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 5;
+  font-weight: bold;
+}
+
+.bicenda-luz-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  width: 100%;
+  bottom: 12px;
+}
+
+.bicisenda-luz{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: yellow;
+  box-shadow: 1px 1px 8px 3px rgba(255,248,0,0.71);
+}
+
+.camara{
+  display: inline-block;
+  flex-direction: column;
+  overflow: hidden;
+  float: right;
+  margin-right: 50px;
+  margin-top: 5px;
+  transform: scale(0.7);
+}
+
+.luces-ciudad{
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  grid-template-columns: repeat(7,1fr);
+}
+
+.luces-ciudad img{
+  height: 140px;
+}
