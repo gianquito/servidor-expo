@@ -46,9 +46,11 @@ socket.onmessage = function(event) {
         document.getElementById(key).style.background = "1px 1px 8px 3px rgba(255,248,0,0.71)";
       }
     }else if(key.startsWith("Calle_luz")){
-        document.getElementById(key).children[0].style.opacity = "0";
-        document.getElementById(key).children[0].children[0].style.boxShadow = "1px 1px "+ data[key] +"px "+data[key]*0.13+"px rgb(255,248,0, 0.71);";
-        document.getElementById(key).children[0].children[1].style.boxShadow = "1px 1px 13px 13px rgb(255,248,0, 0.71);";
+        //document.getElementById(key).children[0].style.opacity = "0";
+        document.getElementById(key).children[0].children[0].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
+        document.getElementById(key).children[0].children[1].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
+        document.getElementById(key).children[0].children[0].style.background = "rgba(255,255,0,"+data[key]*+0.6+")";
+        document.getElementById(key).children[0].children[1].style.background = "rgba(255,255,0,"+data[key]*+0.6+")";
     }
   })
 }

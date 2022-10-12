@@ -57,13 +57,13 @@ function test(){
     'Bici_led3': 0,
     'Bici_led4': 0,
     'Bici_led5': 0,
-    'Calle_luz1': 0,
-    'Calle_luz2': 1,
-    'Calle_luz3': 0,
-    'Calle_luz4': 0,
-    'Calle_luz5': 1,
-    'Calle_luz6': 1,
-    'Calle_luz7': 1,
+    'Calle_luz1': 1,
+    'Calle_luz2': 25,
+    'Calle_luz3': 50,
+    'Calle_luz4': 75,
+    'Calle_luz5': 100,
+    'Calle_luz6': 0,
+    'Calle_luz7': 0,
   }
 }
 

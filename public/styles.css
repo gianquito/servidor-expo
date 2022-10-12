@@ -147,8 +147,8 @@ body{
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: lightyellow;
-  box-shadow: 1px 1px 13px 12px rgb(255, 248, 0,1);
+  background: none;
+  box-shadow: none;
   z-index: 500;
 }
 
@@ -158,8 +158,8 @@ body{
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: lightyellow;
-  box-shadow: 1px 1px 13px 12px rgb(255,248,0, 0.71);
+  background: none;
+  box-shadow: none;
   z-index: 500;
 }
 
