@@ -1,5 +1,7 @@
 let socket = new WebSocket("ws://localhost:8080");
 
+
+let camaraActiva = false;
 socket.onmessage = function(event) {
   var data = JSON.parse(event.data);
   //console.log(data);
@@ -47,21 +49,38 @@ socket.onmessage = function(event) {
       }
     }else if(key.startsWith("Calle_luz")){
         //document.getElementById(key).children[0].style.opacity = "0";
-        document.getElementById(key).children[0].children[0].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
-        document.getElementById(key).children[0].children[1].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
-        document.getElementById(key).children[0].children[0].style.background = "rgba(255,255,0,"+data[key]*+0.6+")";
-        document.getElementById(key).children[0].children[1].style.background = "rgba(255,255,0,"+data[key]*+0.6+")";
+        if(data[key] > 10){
+          document.getElementById(key).children[0].children[0].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
+          document.getElementById(key).children[0].children[1].style.boxShadow = "1px 1px 13px "+data[key]*0.16+"px rgb(255,248,0, 0.71)";
+          document.getElementById(key).children[0].children[0].style.background = "rgba(255,255,0,"+data[key]*+0.4+")";
+          document.getElementById(key).children[0].children[1].style.background = "rgba(255,255,0,"+data[key]*+0.4+")";
+        }else{
+          document.getElementById(key).children[0].children[0].style.boxShadow = "none";
+          document.getElementById(key).children[0].children[1].style.boxShadow = "none";
+          document.getElementById(key).children[0].children[0].style.background = "rgba(255,255,0,0.4)";
+          document.getElementById(key).children[0].children[1].style.background = "rgba(255,255,0,0.4)";
+        }
+    }else if(key == "Casa_luz_puerta"){
+      //20 segundos se muestra
+      if(data[key] == 1){
+        if(!camaraActiva){
+          document.getElementById("casa").children[0].src = "assets/casa_prendido.png";
+          camaraActiva = true;
+          document.getElementById(key).style.display = "inline-block";
+          setTimeout(() => { document.getElementById("casa").children[0].src = "assets/casa_apagado.png";  document.getElementById(key).style.display = "none"; camaraActiva = false; }, 20000)
+        }
+      }
     }
   })
 }
 
 //camara
-fetch(document.getElementById("camara").querySelector("iframe").src)
+/*fetch(document.getElementById("camara").querySelector("iframe").src)
   .then(response => {
     document.getElementById("camara").style.display = "inline-block";
   }).catch(error => {
     document.getElementById("camara").style.display = "none";
-  });
+  });*/
 
 function enviar(datos){
   socket.send(datos);

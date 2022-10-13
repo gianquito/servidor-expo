@@ -30,7 +30,8 @@ s.on('connection', function(ws) {
                                             'Auto4_luzV': 1,
                                             'Bici_posicion': 10
                                           })) },1000)*/
-  setInterval(()=> ws.send(JSON.stringify(test())),1000)
+
+  //setInterval(()=> ws.send(JSON.stringify(test())),1000)
 
 });
 
@@ -64,6 +65,7 @@ function test(){
     'Calle_luz5': 100,
     'Calle_luz6': 0,
     'Calle_luz7': 0,
+    'Camara': 1
   }
 }
 
